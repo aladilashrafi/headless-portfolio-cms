@@ -8,7 +8,8 @@ class Contact {
         register_rest_route( $ns, '/contact', [
             'methods'             => 'POST',
             'callback'            => [ __CLASS__, 'handle_submission' ],
-            'permission_callback' => [ Registry::class, 'check_public_read_permission' ],
+            // This is a public contact form endpoint — unauthenticated submissions are intentional.
+            'permission_callback' => '__return_true',
         ] );
     }
 
