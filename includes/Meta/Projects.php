@@ -18,11 +18,18 @@ class Projects {
             '_hpcms_seo_description'  => 'string',
         ];
         foreach ( $fields as $key => $type ) {
+            $sanitize = 'sanitize_text_field';
+            if ( $type === 'boolean' ) {
+                $sanitize = 'rest_sanitize_boolean';
+            } elseif ( in_array( $key, [ '_hpcms_key_results', '_hpcms_seo_description', '_hpcms_gallery' ], true ) ) {
+                $sanitize = 'sanitize_textarea_field';
+            }
+
             register_post_meta( 'hpcms_project', $key, [
                 'type'              => $type,
                 'single'            => true,
                 'show_in_rest'      => true,
-                'sanitize_callback' => $type === 'boolean' ? 'rest_sanitize_boolean' : 'sanitize_text_field',
+                'sanitize_callback' => $sanitize,
                 'default'           => $type === 'boolean' ? false : '',
             ] );
         }
