@@ -1,0 +1,148 @@
+/* ============================================================
+   Headless Portfolio CMS — Admin Settings Styles
+   v1.1.0
+   ============================================================ */
+
+.hpcms-settings-wrap {
+    max-width: 960px;
+}
+
+.hpcms-tab-content {
+    margin-top: 20px;
+}
+
+/* ---- Accordion ---- */
+.hpcms-accordion-section {
+    margin-bottom: 4px;
+    border: 1px solid #dcdcde;
+    border-radius: 3px;
+    background: #fff;
+}
+
+.hpcms-accordion-toggle {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    padding: 14px 18px;
+    background: #f6f7f7;
+    border: none;
+    border-bottom: 1px solid transparent;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: 600;
+    color: #1d2327;
+    text-align: left;
+    border-radius: 3px;
+    transition: background 0.15s ease;
+}
+
+.hpcms-accordion-toggle:hover {
+    background: #edeff0;
+}
+
+.hpcms-accordion-section.is-open .hpcms-accordion-toggle {
+    border-bottom-color: #dcdcde;
+    border-radius: 3px 3px 0 0;
+}
+
+.hpcms-accordion-icon {
+    font-size: 11px;
+    color: #787c82;
+    transition: transform 0.2s ease;
+}
+
+.hpcms-accordion-section.is-open .hpcms-accordion-icon {
+    transform: rotate(180deg);
+}
+
+.hpcms-accordion-body {
+    padding: 0 18px 18px;
+}
+
+.hpcms-accordion-body .form-table th {
+    width: 200px;
+}
+
+/* ---- Gallery / Image Picker ---- */
+.hpcms-gallery-preview {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-bottom: 10px;
+}
+
+.hpcms-gallery-thumb {
+    position: relative;
+    width: 80px;
+    height: 80px;
+}
+
+.hpcms-gallery-thumb img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 3px;
+    border: 1px solid #dcdcde;
+    display: block;
+}
+
+.hpcms-remove-gallery-item {
+    position: absolute;
+    top: -8px;
+    right: -8px;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background: #cc1818;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    font-size: 11px;
+    line-height: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+}
+
+.hpcms-remove-gallery-item:hover {
+    background: #a00;
+}
+
+/* ---- Repeatable rows (location, skill tags) ---- */
+.hpcms-repeatable-row,
+.hpcms-tag-row {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 6px;
+}
+
+/* ---- Card rows ---- */
+.hpcms-card-row {
+    border: 1px solid #dcdcde;
+    border-radius: 3px;
+    padding: 14px;
+    margin-bottom: 8px;
+    background: #f9f9f9;
+}
+
+.hpcms-card-row p {
+    margin: 0 0 8px;
+}
+
+.hpcms-card-row label {
+    font-weight: 600;
+    font-size: 12px;
+    color: #50575e;
+    display: block;
+    margin-bottom: 4px;
+}
+
+/* ---- Buttons ---- */
+.hpcms-add-location,
+.hpcms-add-card,
+.hpcms-add-tag {
+    margin-top: 4px !important;
+}

@@ -1,10 +1,10 @@
 === Headless Portfolio CMS ===
-Contributors: aladilashrafi, anytv
+Contributors: aladilashrafi
 Tags: headless, portfolio, nextjs, cms, rest-api
 Requires at least: 6.5
-Tested up to: 6.9
+Tested up to: 7.0
 Requires PHP: 8.1
-Stable tag: 1.0.0
+Stable tag: 1.1.0
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -54,6 +54,18 @@ Simply go to **Portfolio CMS > Settings > API & CORS**, add your frontend's URL 
 The plugin provides a configuration setting for API Cache Duration, which you can use in conjunction with your frontend caching strategies (like Next.js ISR).
 
 == Changelog ==
+
+= 1.1.0 =
+* Settings storage refactored to grouped option keys (hpcms_general, hpcms_social, hpcms_seo, hpcms_homepage).
+* One-time migration routine moves existing data to new structure automatically on upgrade.
+* Profile Info tab renamed to General. Field label Full Name renamed to Name.
+* Added Favicon, Header Button, and Footer Text (HTML) fields to General tab.
+* Location field is now repeatable with unique IDs.
+* Removed Bio, Hero Description, and Avatar URL fields.
+* Social Links tab expanded: Dribbble, Gravatar, WordPress.org, Facebook, Instagram, WhatsApp added.
+* API & CORS tab renamed to Configuration.
+* New REST API endpoint: GET /wp-json/hpcms/v1/main
+* /profile endpoint deprecated (returns X-HPCMS-Deprecated header). Will be removed in 1.3.0.
 
 = 1.0.0 =
 * Initial public release!
