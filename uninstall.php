@@ -15,19 +15,25 @@ if ( '1' !== $hpcms_should_delete ) {
 
 // ── Delete all plugin options ──────────────────────────────────────────────────
 $hpcms_options = [
-    // Profile
+    // Profile (legacy flat keys — v1.0.0)
     'hpcms_full_name', 'hpcms_tagline', 'hpcms_hero_bio', 'hpcms_bio', 'hpcms_email',
     'hpcms_phone', 'hpcms_location', 'hpcms_avatar_url',
-    // Social
+    // Social (legacy flat keys — v1.0.0)
     'hpcms_github', 'hpcms_linkedin', 'hpcms_twitter',
     'hpcms_youtube', 'hpcms_behance', 'hpcms_dribbble',
-    // SEO
+    // SEO (legacy flat keys — v1.0.0)
     'hpcms_meta_title', 'hpcms_meta_description', 'hpcms_og_image',
-    // API & CORS
+    // API & CORS (configuration tab — untouched)
     'hpcms_enable_api', 'hpcms_enable_cors', 'hpcms_allowed_origins',
     'hpcms_cache_duration', 'hpcms_api_token', 'hpcms_frontend_url',
     'hpcms_revalidate_token', 'hpcms_contact_email',
     'hpcms_delete_data_on_uninstall',
+    // Grouped option keys — v1.1.0
+    'hpcms_general',
+    'hpcms_homepage',
+    'hpcms_social',
+    'hpcms_seo',
+    'hpcms_migration_v110_done',
 ];
 
 foreach ( $hpcms_options as $hpcms_opt ) {
