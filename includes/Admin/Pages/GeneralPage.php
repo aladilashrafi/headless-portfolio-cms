@@ -171,12 +171,12 @@ class GeneralPage {
                             ?>
                             <div class="hpcms-repeatable-row" data-row="<?php echo esc_attr( (string) $i ); ?>">
                                 <input type="hidden"
-                                    name="hpcms_general[locations][<?php echo $i; ?>][id]"
+                                    name="hpcms_general[locations][<?php echo absint( $i ); ?>][id]"
                                     value="<?php echo esc_attr( $loc['id'] ); ?>"
                                     class="hpcms-loc-id"
                                 />
                                 <input type="text"
-                                    name="hpcms_general[locations][<?php echo $i; ?>][value]"
+                                    name="hpcms_general[locations][<?php echo absint( $i ); ?>][value]"
                                     value="<?php echo esc_attr( $loc['value'] ); ?>"
                                     class="regular-text"
                                     placeholder="<?php esc_attr_e( 'e.g. Dhaka, Bangladesh', 'headless-portfolio-cms' ); ?>"
