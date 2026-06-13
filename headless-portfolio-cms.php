@@ -1,7 +1,7 @@
 <?php
 /**
  * Plugin Name: Headless Portfolio CMS
- * Plugin URI:  https://github.com/aladilashrafi/headless-portfolio-cms
+ * Plugin URI:  https://wordpress.org/plugins/headless-portfolio-cms
  * Description: API-first headless portfolio CMS for WordPress. Powers modern frontends (Next.js, React, Astro, Nuxt, Gatsby) via a clean REST API.
  * Version:     1.1.0
  * Requires at least: 6.5

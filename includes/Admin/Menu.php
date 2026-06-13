@@ -74,7 +74,7 @@ class Menu {
             'manage_options',
             'headless-portfolio-cms',
             [ Dashboard::class, 'render' ],
-            HPCMS_PLUGIN_URL . 'assets/favicon.svg',
+            HPCMS_PLUGIN_URL . 'assets/icon.svg',
             100
         );
 
